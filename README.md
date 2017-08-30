@@ -1,6 +1,15 @@
 # Price Formatter
 
-[TODO. There will be project description]
+Script for grouping numbers and removing decimals.
+
+# How to Use
+```bash
+python3 format_price.py 3245
+```
+Example output:
+```bash
+3 245
+```
 
 # Project Goals
 
