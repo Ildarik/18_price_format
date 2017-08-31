@@ -1,6 +1,6 @@
 # Price Formatter
 
-Script for grouping numbers and removing decimals.
+Script for grouping numbers and removing decimals. Argument must be integer!
 
 # How to Use
 ```bash
