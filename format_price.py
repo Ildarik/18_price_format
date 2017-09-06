@@ -7,7 +7,7 @@ def format_price(price):
         price = '{0:,.2f}'.format(price).replace(',', ' ').replace('.00', '')
     except (ValueError, TypeError):
         raise ValueError('Given value cannot be converted into a number!')
-    if price[0] == '-' or price == '0.0':
+    if price[0] == '-' or price == '0':
         raise ValueError('Price must be greater then 0!')
     return price
 
