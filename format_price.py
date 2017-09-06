@@ -8,7 +8,7 @@ def format_price(price):
     except (ValueError, TypeError):
         return 'Not available!'
     if price[0] == '-' or price == '0':
-        raise ValueError('Price must be greater then 0!')
+        return 'Price must be greater then 0!'
     return price
 
 if __name__ == '__main__':
