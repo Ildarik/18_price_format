@@ -3,10 +3,13 @@ import argparse
 
 def format_price(price):
     try:
-        price = int(price)
-        return '{0:,}'.format(price).replace(',', ' ')
-    except ValueError:
-        return None
+        price = float(price)
+        price = '{0:,}'.format(price).replace(',', ' ')
+    except (ValueError, TypeError):
+        raise ValueError('Given value cannot be converted into a number!')
+    if price[0] == '-' or price == '0.0':
+        raise ValueError('Price must be greater then 0!')
+    return price
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
