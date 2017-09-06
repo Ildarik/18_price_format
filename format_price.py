@@ -4,7 +4,7 @@ import argparse
 def format_price(price):
     try:
         price = float(price)
-        price = '{0:,}'.format(price).replace(',', ' ')
+        price = '{0:,.2f}'.format(price).replace(',', ' ').replace('.00', '')
     except (ValueError, TypeError):
         raise ValueError('Given value cannot be converted into a number!')
     if price[0] == '-' or price == '0.0':
